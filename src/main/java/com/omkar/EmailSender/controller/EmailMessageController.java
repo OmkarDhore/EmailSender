@@ -29,7 +29,7 @@ public class EmailMessageController {
 	 @Autowired
 	    private JavaMailSender mailSender;
 
-	    @Scheduled(cron = "0 * * * * *") // This cron expression represents 1 PM every day "0 0 13 * * ?"
+	    @Scheduled(cron = "0 0 13 * * ?") // This cron expression represents 1 PM every day
 	    public void sendEmails() {
 	        emailMessageService.readUserDataInBatches();
 	    }
