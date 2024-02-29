@@ -16,8 +16,8 @@ public class UserConsumerService {
     public void consumeUserFromKafka(User user) {
     	SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(user.getEmail());
-        message.setSubject("Your Daily Email");
-        message.setText("This is the email content.");
+        message.setSubject("WelcomeWelcome to Soluce");
+        message.setText("Dear User,Welcome to Solus.finance! We are thrilled to have you on board and excited to embark on this journey together.");
         mailSender.send(message);
     }
 }
